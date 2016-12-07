@@ -1,0 +1,77 @@
+table {
+	width: 50%;
+	float: left;
+	margin-bottom: 3em;
+}
+
+@media(max-width: 1024px) {
+	table {
+		width: 80%;
+	}
+}
+
+caption {
+	font-weight: bold;
+	border-bottom: 1px solid #C3C3C3;
+	margin-left: 30%;
+	margin-bottom: 1em;
+	font-size: 115%;
+}
+
+th {
+	text-align: right;
+}
+
+td {
+	padding-left: 1em;
+	width: 7em;
+}
+
+summary {
+	cursor: pointer;
+	user-select: none;
+	margin-bottom: 2em;
+}
+
+tr.not-calculated td::before {
+	content: "--";
+	color: #888;
+	padding-left: 1em;
+}
+
+tr.explained {
+	font-style: italic;
+}
+
+tr.explained td {
+	position: relative;
+}
+
+/* Question mark circle icon */
+tr.explained td::after {
+	content: "?";
+	position: absolute;
+	top: .65em;
+	right: 0;
+	width: 1.2em;
+	height: 1.2em;
+	border-radius: 1em;
+	border: 1px solid #333;
+	font-size: 90%;
+	font-style: normal;
+	line-height: 1.2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+#reportDetailsProblem {
+	clear: left;
+	display: block;
+	width: 12em;
+	margin: 1em auto 2em;
+	text-decoration: none;
+	color: black;
+	border: 1px solid #C3C3C3;
+	text-align: center;
+	line-height: 2em;
+}

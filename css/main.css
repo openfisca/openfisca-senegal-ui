@@ -1,0 +1,119 @@
+.SGMAPembauche {
+	font-size: 150%;
+	padding-top: 1em;
+	max-width: 45em;
+	line-height: 2.5;
+}
+
+#input, #error, #result, summary {
+	text-align: center;
+}
+
+input, select {
+	font-size: 100%;
+	appearance: none;
+	background-color: white;
+	border: none;
+	border-bottom: 1px solid #9A9A9A;
+	border-radius: 0;
+	padding: .2em 0;
+	margin: 0 .5em;
+	vertical-align: middle;
+}
+
+#select-entreprise-type {
+	width: 7.5em;
+}
+
+input[type="number"] {
+	max-width: 7em;
+}
+
+#code_postal_entreprise {
+	max-width: 6em;
+}
+
+[name="heures_remunerees_volume"] {
+	max-width: 2.3em;
+}
+
+input.centered {
+	text-align: center;
+}
+
+label.dynamic-info {
+	font-size: 65%;
+	font-style: italic;
+}
+
+select[data-provides="employee"] {
+	width: 6.5em;
+}
+
+/* Enables the first input's help text to pop
+over the lasts of this group.
+Also keeps related inputs together. */
+#input fieldset {
+	white-space: nowrap;
+	display: inline-block;
+}
+
+input#salaire:hover ~ *,
+input#salaire:focus ~ * {
+	visibility: hidden;
+}
+input#salaire:hover + label,
+input#salaire:focus + label {
+	visibility: visible;
+}
+input#salaire:hover ~ .input-help,
+input#salaire:focus ~ .input-help {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* This input-help will pop over the
+following input fields, using the
+negative margin trick */
+input#salaire ~ .input-help {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .1s linear;
+	display: inline-block;
+	font-size: 60%;
+	margin: 0 -22em 0 .5em;
+	line-height: 1.2em;
+	border-left: 1px solid #CCC;
+	padding: .5em;
+	text-align: left;
+	width: 20em;
+	vertical-align: middle;
+}
+
+details {
+	font-size: 60%;
+}
+
+#error {
+	color: red;
+	border: 1px solid red;
+	border-radius: .5em;
+}
+
+#note-alternance {
+	font-size: 75%;
+	text-align: center;
+	font-style: italic;
+}
+
+@media(max-width: 500px) {
+	body {
+		padding: 0;
+		width: 15em;
+		text-align: left;
+	}
+
+	input {
+		margin: 0;
+	}
+}

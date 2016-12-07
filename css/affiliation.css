@@ -1,0 +1,34 @@
+#affiliation {
+	font-size: 150%;
+	text-align: right;
+	line-height: 1.5;
+}
+
+#affiliation a {
+	display: block;
+}
+
+#affiliation img {
+	height: 2em;
+}
+
+#senegal_flag {
+	float: left;
+	padding-left: 1em;
+	font-size: 250%;
+	margin-top: 0;
+}
+
+#affiliation__header {
+	font-weight: bold;
+	color: rgb(138, 0, 46);
+	text-decoration: none;
+}
+
+#affiliation__sgmap img {
+	height: 5em;
+}
+
+#affiliation__beta {
+	font-size: 80%;
+}
