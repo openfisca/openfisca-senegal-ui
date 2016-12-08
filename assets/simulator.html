@@ -1,37 +1,36 @@
 <div class="SGMAPembauche" lang="fr">
 	<section id="input">
-		<form action="https://embauche.beta.gouv.fr/openfisca/api/2/formula/accident_du_travail+famille+fnal+versement_transport+agff_salarie+agirc_salarie+agirc_gmp_salarie+apec_salarie+arrco_salarie+chomage_salarie+cotisation_exceptionnelle_temporaire_salarie+vieillesse_plafonnee_salarie+vieillesse_deplafonnee_salarie+mmid_salarie+csg_deductible_salaire+csg_imposable_salaire+crds_salaire+salaire_super_brut+ags+agff_employeur+apec_employeur+arrco_employeur+chomage_employeur+cotisation_exceptionnelle_temporaire_employeur+vieillesse_deplafonnee_employeur+vieillesse_plafonnee_employeur+mmid_employeur+contribution_supplementaire_apprentissage+contribution_solidarite_autonomie+formation_professionnelle+participation_effort_construction+taxe_apprentissage+agirc_employeur+agirc_gmp_employeur+allegement_fillon+allegement_cotisation_allocations_familiales+exoneration_cotisations_employeur_apprenti+exoneration_cotisations_employeur_stagiaire+exoneration_cotisations_employeur_jei+credit_impot_competitivite_emploi+financement_organisations_syndicales+prevoyance_obligatoire_cadre+cout_du_travail+aide_premier_salarie+aide_embauche_pme+smic_proratise+taxe_salaires+forfait_social" method="GET">
+		<form action="http://openfisca-senegal.mes-aides.beta.gouv.fr/api/2/formula/impot_revenus" method="GET">
 			<div>
-        Je suis 
-				<select id="select-situation-familial" data-provides="statut-statut-familial">
+     <!--   Je suis 
+		  	<select id="select-situation-familial" data-provides="statut-statut-familial">
 					<option value="salarie" selected>Célibataire</option>
 					<option value="commercant">Marié(e)</option>
 					<option value="commercant">Divorcé(e)</option>
 					<option value="commercant">Veuf(ve)</option>
 				</select>
-        et la situation de mon conjoint est : 
+        et la situation de mon conjoint est :  
  				<select id="select-situation-conjoint" data-provides="statut-statut-conjoint">
 					<option value="salarie" selected>Salarié(e)</option>
 					<option value="commercant">Non-salarié(e)</option>
 					<option value="commercant">je n'ai pas de conjoint</option>
 				</select>      </br> 
         avec 
-				<input name="effectif_entreprise" id="effectif_entreprise" type="number" min="0" placeholder="0" value="0" max="999"> <!-- this input's value will be incremented : we're simulating salaries once the new employee is recruited -->
+				<input name="effectif_entreprise" id="effectif_entreprise" type="number" min="0" placeholder="0" value="0" max="999"> <!-- this input's value will be incremented : we're simulating salaries once the new employee is recruited
         enfants à charge.
         <section id="result" class="js-only">
           Votre nombre de part s'élève à  
-          <span data-source="salaire_super_brut" data-round title="Salaire super-brut">…</span>&nbsp; points.
+          <span data-source="salaire_super_brut" data-round title="Salaire super-brut">…</span>&nbsp; points epjpdoejpodj.
         </section>
-
+-->
 				<!-- <label for="effectif_entreprise" title="En équivalents temps pleins : un mi-temps vaut 0,5, par exemple.">salariés</label> -->
       J'ai un revenu brut mensuel de 
-          <input name="salaire_de_base" id="salairee" type="number" min="0" max="9999999" placeholder="2300" value="2300" step="any">
+          <input name="salaire" id="salaire" type="number" min="0" max="9999999" placeholder="2300" value="2300" step="any">
             &nbsp;FCFA
 	<section id="result" class="js-only">
-	 mes impots s'élèvent à<span data-source="salaire_super_brut" data-round title="Salaire super-brut">…</span>&nbsp;FCFA
+	 mes impots s'élèvent à<span data-source="impot_revenus" data-round title="Impot sur le revenu">…</span>&nbsp;FCFA
 	</section>
 	
-
 
 	<section id="note-alternance" hidden>Note: pour une simulation plus fiable du cas de l'apprentissage, rendez-vous sur <a href="https://www.alternance.emploi.gouv.fr/portail_alternance/jcms/hl_5641" target="_blank">le simulateur du portail de l'alternance</a></section>
 
