@@ -4,7 +4,7 @@ import './css/affiliation.css'
 import './css/details.css'
 import './css/tooltip.css'
 
-import html from './assets/embauche.html'
+import html from './assets/simulator.html'
 document.write(html)
 
 require('core-js/fn/promise')
