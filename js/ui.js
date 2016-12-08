@@ -14,20 +14,15 @@ function getOutputVariables() {
 		datedBaseUrl =
 			baseUrl.split('formula/')[0] +
 			'formula/' + simulationPeriod + '/' +
-			baseUrl.split('formula/')[1],
-		// some of the output variables are chosen dynamically
-		sourcesToAdd =
-			[ ...document.querySelectorAll('[data-add-source-to-action]') ]
-				.map(element => element.getAttribute('data-source'))
-				.join('+')
+			baseUrl.split('formula/')[1]
 
-	return `${datedBaseUrl}+${sourcesToAdd}`
+	return `${datedBaseUrl}`
 }
 
 function collectInput(form) {
 	const input = collectFormFields(form)
 
-  Object.assign(input, addBooleanParameters())
+  // Object.assign(input, addBooleanParameters())
 
 // Additional parameters
 //input['contrat_de_travail_debut'] = simulationPeriod
@@ -97,8 +92,6 @@ function display(data) {
 
 		target.textContent = value
 	})
-
-	setErrorVisible(false)
 }
 
 function displayCommunesFetchResults(info, values) {
@@ -127,14 +120,6 @@ function showError(data) {
 	data.userAgent = window.navigator.userAgent
 
 	display(data)
-	setErrorVisible(true)
-}
-
-function setErrorVisible(shouldBeVisible) {
-	const element = document.getElementById('error')
-	if (! shouldBeVisible)
-		element.setAttribute('hidden', true)
-	else element.removeAttribute('hidden')
 }
 
 function reflectParameterChange(event) {
