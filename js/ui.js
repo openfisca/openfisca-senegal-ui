@@ -73,17 +73,13 @@ function display(data) {
 			return
 
 		if (typeof value == 'number') {
-			value = value
-				.toFixed(target.hasAttribute('data-round') ? 0 : 2)
-				.replace('.', ',')
+			value = Intl.NumberFormat().format(value)
+			console.log(value)
+			value = value.replace(',', ' ')
+			value = value.replace('.', ',')
 		}
-
-		target.textContent = format(value);
+		target.textContent = value;
 	})
-}
-
-function format(nb) {
-    return nb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
 
