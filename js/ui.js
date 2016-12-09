@@ -72,24 +72,20 @@ function display(data) {
 		if (! target)
 			return
 
-		/* Only display the second result text, "cout du travail",
-		if it is different from "salaire super brut" */
-		if (toSet == 'cout_du_travail') {
-			const container = document.querySelector('#cout_du_travail_container')
-			if (data['salaire_super_brut'] == value)
-				container.setAttribute('hidden', true)
-			else container.removeAttribute('hidden')
-		}
-
 		if (typeof value == 'number') {
 			value = value
 				.toFixed(target.hasAttribute('data-round') ? 0 : 2)
 				.replace('.', ',')
 		}
 
-		target.textContent = value
+		target.textContent = format(value);
 	})
 }
+
+function format(nb) {
+    return nb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
 
 function displayCommunesFetchResults(info, values) {
 	// Inform the user
