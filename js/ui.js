@@ -75,7 +75,7 @@ function display(data) {
 		if (typeof value == 'number') {
 			value = Intl.NumberFormat().format(value)
 			console.log(value)
-			value = value.replace(',', ' ')
+			value = value.replace(/,/g, ' ')
 			value = value.replace('.', ',')
 		}
 		target.textContent = value;
