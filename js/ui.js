@@ -51,7 +51,7 @@ const collectFormFields = (form) =>
 
 const BOOLEAN_PARAMETERS = {
 	marie: [ 'est_marie' ],
-//	'entreprise-type': [ 'entreprise_est_association_non_lucrative' ],
+	'statut-conjoint': [ 'conjoint_a_des_revenus' ],
 }
 
 

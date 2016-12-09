@@ -7,12 +7,13 @@
 					<option value="est_marie" selected>Marié(e)</option>
 					<option value="celibataire">Célibataire, veuf ou divorcé</option>
 				</select>
-<!--         et la situation de mon conjoint est :
- 				<select id="select-situation-conjoint" data-provides="statut-statut-conjoint">
-					<option value="salarie" selected>Salarié(e)</option>
-					<option value="commercant">Non-salarié(e)</option>
-					<option value="commercant">je n'ai pas de conjoint</option>
-				</select>      </br> -->
+        et mon conjoint
+ 				<select id="select-situation-conjoint" data-provides="statut-conjoint">
+                    <option value="conjoint_a_des_revenus" selected>a des</option>
+					<option value="conjoint_a_pas_de_revenus" selected>n'a pas de</option>
+				</select>
+        revenus
+        </br>
         avec
 				<input name="nombre_enfants" id="nombre_enfants" type="number" min="0" placeholder="0" value="0" max="999">
         enfants à charge.
