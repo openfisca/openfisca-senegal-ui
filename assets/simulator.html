@@ -15,22 +15,22 @@
                         <option value="conjoint_a_des_revenus" selected>a des</option>
     					<option value="conjoint_a_pas_de_revenus" selected>n'a pas de</option>
     				</select>
-            revenus
+            revenus.
         </span>
         </br>
-        avec
+        J'ai
 				<input name="nombre_enfants" id="nombre_enfants" type="number" min="0" placeholder="0" value="0" max="999">
         enfants à charge.
         <section id="result" class="js-only">
-          Votre nombre de part s'élève à
-          <span data-source="nombre_de_parts" title="Nombre de parts">…</span>&nbsp; points.
+          Mon nombre de part s'élève à
+          <b><span data-source="nombre_de_parts" title="Nombre de parts">…</span>&nbsp;.</b>
         </section>
 
       J'ai un salaire annuel de
           <input name="salaire" id="revenus" type="number" min="0" max="9999999" placeholder="2000000" value="2000000" step="any">
-            &nbsp;FCFA
+            &nbsp;FCFA.
 	<section id="result" class="js-only">
-	 mes impots s'élèvent à <span data-source="impot_revenus" data-round title="Impot sur le revenu">…</span>&nbsp;FCFA
+	 Mes impôts s'élèvent à <b><span data-source="impot_revenus" data-round title="Impot sur le revenu">…</span>&nbsp;FCFA.</b>
 	</section>
 
 
@@ -46,9 +46,5 @@
 		</p>
 	</section>
 
-  <details id="taxes" class="js-only">
-		<summary>Cotisations détaillées</summary>
-		<a id="reportDetailsProblem" href="mailto:contact@embauche.beta.gouv.fr?subject=Erreur dans les résultats du simulateur">Signaler une erreur</a>
-	</details>
 
 </div>
