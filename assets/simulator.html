@@ -26,9 +26,29 @@
           <b><span data-source="nombre_de_parts" title="Nombre de parts">…</span>&nbsp;.</b>
         </section>
 
-      J'ai un salaire annuel de
-          <input name="salaire" id="revenus" type="number" min="0" max="9999999" placeholder="2000000" value="2000000" step="any">
-            &nbsp;FCFA.
+    Je suis
+        <select id="statut">
+            <option value="salarie" selected>Salarié(e)</option>
+            <option value="retraite">Retraité(e)</option>
+        </select>
+    <br/>
+
+    <span id="bloc-salaire">
+        Mon salaire annuel est de
+            <input name="salaire" id="revenus" type="number" min="0"
+            max="9999999" placeholder="2000000" value="2000000" step="any">
+        &nbsp;FCFA.
+        <br/>
+    </span>
+
+    <span id="bloc-retraite" hidden="true">
+      Ma pension de retraite annuelle est de
+          <input name="pension_retraite" id="pension_retraite" type="number" min="0"
+          max="9999999" placeholder="2000000" value="2000000" step="any">
+        &nbsp;FCFA
+    </span>
+
+
 	<section id="result" class="js-only">
 	 Mes impôts s'élèvent à <b><span data-source="impot_revenus" data-round title="Impot sur le revenu">…</span>&nbsp;FCFA.</b>
 	</section>

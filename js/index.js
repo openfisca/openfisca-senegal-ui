@@ -26,6 +26,18 @@ function bindToForm(form) {
 			}
 		}
 
+		if (id == 'statut') {
+			var blocSalaire = document.querySelector('#bloc-salaire')
+			var blocRetraite = document.querySelector('#bloc-retraite')
+			if (event.target.value == 'salarie') {
+				blocRetraite.setAttribute('hidden', true)
+				blocSalaire.removeAttribute('hidden')
+			} else {
+				blocSalaire.setAttribute('hidden', true)
+				blocRetraite.removeAttribute('hidden')
+			}
+		}
+
 		if (name === 'code_postal_entreprise')
 			return handleCodePostalInput(event.target.value, handleBasicFormChanges)
 		if (name === 'contrat_de_travail')
