@@ -31,10 +31,12 @@ function bindToForm(form) {
 			var blocRetraite = document.querySelector('#bloc-retraite')
 			if (event.target.value == 'salarie') {
 				blocRetraite.setAttribute('hidden', true)
+				document.querySelector('#pension_retraite').value = 0
 				blocSalaire.removeAttribute('hidden')
 			} else {
 				blocSalaire.setAttribute('hidden', true)
 				blocRetraite.removeAttribute('hidden')
+				document.querySelector('#revenus').value = 0
 			}
 		}
 
