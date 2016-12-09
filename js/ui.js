@@ -22,10 +22,7 @@ function getOutputVariables() {
 function collectInput(form) {
 	const input = collectFormFields(form)
 
-  // Object.assign(input, addBooleanParameters())
-
-// Additional parameters
-//input['contrat_de_travail_debut'] = simulationPeriod
+  Object.assign(input, addBooleanParameters())
 
 	return input
 }
@@ -53,7 +50,7 @@ const collectFormFields = (form) =>
 
 
 const BOOLEAN_PARAMETERS = {
-//	employee: [ 'apprenti' ],
+	marie: [ 'est_marie' ],
 //	'entreprise-type': [ 'entreprise_est_association_non_lucrative' ],
 }
 

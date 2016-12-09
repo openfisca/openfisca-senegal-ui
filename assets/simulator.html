@@ -1,49 +1,37 @@
 <div class="SGMAPembauche" lang="fr">
 	<section id="input">
-		<form action="http://openfisca-senegal.mes-aides.beta.gouv.fr/api/2/formula/impot_revenus" method="GET">
+		<form action="http://openfisca-senegal.mes-aides.beta.gouv.fr/api/2/formula/impot_revenus+nombre_de_parts" method="GET">
 			<div>
-     <!--   Je suis
-		  	<select id="select-situation-familial" data-provides="statut-statut-familial">
-					<option value="salarie" selected>Célibataire</option>
-					<option value="commercant">Marié(e)</option>
-					<option value="commercant">Divorcé(e)</option>
-					<option value="commercant">Veuf(ve)</option>
+        Je suis
+		  	<select id="select-situation-familial" data-provides="marie">
+					<option value="est_marie" selected>Marié(e)</option>
+					<option value="celibataire">Célibataire, veuf ou divorcé</option>
 				</select>
-        et la situation de mon conjoint est :
+<!--         et la situation de mon conjoint est :
  				<select id="select-situation-conjoint" data-provides="statut-statut-conjoint">
 					<option value="salarie" selected>Salarié(e)</option>
 					<option value="commercant">Non-salarié(e)</option>
 					<option value="commercant">je n'ai pas de conjoint</option>
-				</select>      </br>
+				</select>      </br> -->
         avec
-				<input name="effectif_entreprise" id="effectif_entreprise" type="number" min="0" placeholder="0" value="0" max="999"> <!-- this input's value will be incremented : we're simulating salaries once the new employee is recruited
+				<input name="nombre_enfants" id="nombre_enfants" type="number" min="0" placeholder="0" value="0" max="999">
         enfants à charge.
         <section id="result" class="js-only">
           Votre nombre de part s'élève à
-          <span data-source="salaire_super_brut" data-round title="Salaire super-brut">…</span>&nbsp; points epjpdoejpodj.
+          <span data-source="nombre_de_parts" title="Nombre de parts">…</span>&nbsp; points.
         </section>
--->
-				<!-- <label for="effectif_entreprise" title="En équivalents temps pleins : un mi-temps vaut 0,5, par exemple.">salariés</label> -->
-      J'ai un revenu brut annuel de
-          <input name="salaire" id="revenus" type="number" min="0" max="9999999" placeholder="2300" value="2300" step="any">
+
+      J'ai un salaire annuel de
+          <input name="salaire" id="revenus" type="number" min="0" max="9999999" placeholder="2000000" value="2000000" step="any">
             &nbsp;FCFA
 	<section id="result" class="js-only">
 	 mes impots s'élèvent à <span data-source="impot_revenus" data-round title="Impot sur le revenu">…</span>&nbsp;FCFA
 	</section>
 
 
-	<section id="note-alternance" hidden>Note: pour une simulation plus fiable du cas de l'apprentissage, rendez-vous sur <a href="https://www.alternance.emploi.gouv.fr/portail_alternance/jcms/hl_5641" target="_blank">le simulateur du portail de l'alternance</a></section>
-
-
-
 	<section id="affiliation">
-<!--
-		<p id="affiliation__sgmap">
-			<a href="http://www.modernisation.gouv.fr"><img alt="Secrétariat Général pour la Modernisation de l'Action Publique" src="http://www.modernisation.gouv.fr/sites/default/files/bloc-sgmap-2.jpg"/></a>
-		</p>
--->
 		<p id="senegal_flag">
-			<img  src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg"/></a>
+			<img  src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg"/>
 		</p>
 
 		<p>
