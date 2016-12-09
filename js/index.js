@@ -17,6 +17,15 @@ function bindToForm(form) {
 
 	const handleFormChanges = event => {
 		const {name, id} = event.target
+		if (id == 'select-situation-familial') {
+			var blocConjoint = document.querySelector('#conjoint')
+			if (event.target.value == 'est_marie') {
+				blocConjoint.removeAttribute('hidden')
+			} else {
+				blocConjoint.setAttribute('hidden', true)
+			}
+		}
+
 		if (name === 'code_postal_entreprise')
 			return handleCodePostalInput(event.target.value, handleBasicFormChanges)
 		if (name === 'contrat_de_travail')
